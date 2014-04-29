@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns="http://maven.apache.org/POM/4.0.0"
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>pl.mobile-warsaw.androidtddworkshop</groupId>
+    <artifactId>parent</artifactId>
+    <version>${my.project.version}</version>
+    <packaging>pom</packaging>
+
+    <modules>
+        <module>tdd-introduction</module>
+        <module>empty-android-project</module>
+    </modules>
+
+    <properties>
+        <my.project.version>1.0.0-SNAPSHOT</my.project.version>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+
+        <android.plugin.version>3.8.2</android.plugin.version>
+        <platform.version>4.4.2_r2</platform.version>
+
+        <junit.version>4.11</junit.version>
+        <robolectric.version>2.2</robolectric.version>
+        <mockito.version>1.9.5</mockito.version>
+        <fest-assert.version>1.4</fest-assert.version>
+    </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>com.google.android</groupId>
+                <artifactId>android</artifactId>
+                <version>${platform.version}</version>
+                <scope>provided</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>junit</groupId>
+                <artifactId>junit</artifactId>
+                <version>${junit.version}</version>
+                <scope>test</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.robolectric</groupId>
+                <artifactId>robolectric</artifactId>
+                <version>${robolectric.version}</version>
+                <scope>test</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.mockito</groupId>
+                <artifactId>mockito-all</artifactId>
+                <version>${mockito.version}</version>
+                <scope>test</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.easytesting</groupId>
+                <artifactId>fest-assert</artifactId>
+                <version>${fest-assert.version}</version>
+                <scope>test</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+    <build>
+        <finalName>${project.artifactId}</finalName>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>com.jayway.maven.plugins.android.generation2</groupId>
+                    <artifactId>android-maven-plugin</artifactId>
+                    <version>${android.plugin.version}</version>
+                    <extensions>true</extensions>
+                    <configuration>
+                        <sdk>
+                            <platform>19</platform>
+                        </sdk>
+                    </configuration>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+    </build>
+</project>
