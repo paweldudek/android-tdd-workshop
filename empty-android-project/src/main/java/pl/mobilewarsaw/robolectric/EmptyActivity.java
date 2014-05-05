@@ -1,4 +1,4 @@
-package pl.mobilewarsaw.empty;
+package pl.mobilewarsaw.robolectric;
 
 import android.app.Activity;
 
