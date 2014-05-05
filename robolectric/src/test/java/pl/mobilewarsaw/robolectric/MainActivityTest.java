@@ -9,8 +9,11 @@ import org.robolectric.RobolectricTestRunner;
 import org.robolectric.shadows.ShadowActivity;
 import org.robolectric.shadows.ShadowIntent;
 import org.robolectric.shadows.ShadowTextView;
+import org.robolectric.shadows.ShadowToast;
 
+import static org.hamcrest.core.IsEqual.equalTo;
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertThat;
 
 
 /**
@@ -38,6 +41,24 @@ public class MainActivityTest {
         Intent startedIntent = shadowActivity.getNextStartedActivity();
         ShadowIntent shadowIntent = Robolectric.shadowOf(startedIntent);
         assertEquals(SecondActivity.class.getName(), shadowIntent.getComponent().getClassName());
+    }
+
+    @Test
+    public void checkIfToastButtonHasListner() {
+        MainActivity mainActivity = Robolectric.buildActivity(MainActivity.class).create().get();
+
+        ShadowTextView shadowButton = Robolectric.shadowOf(mainActivity.toastButton);
+
+        assert shadowButton.getOnClickListener() != null;
+    }
+
+    @Test
+    public void checkIfToastButtonShowsToastOnClick() {
+        MainActivity mainActivity = Robolectric.buildActivity(MainActivity.class).create().get();
+
+        mainActivity.toastButton.performClick();
+
+        assertEquals("it works!", ShadowToast.getTextOfLatestToast());
     }
 
 }
