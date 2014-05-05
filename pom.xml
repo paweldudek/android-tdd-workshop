@@ -5,13 +5,14 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>pl.mobile-warsaw.androidtddworkshop</groupId>
-    <artifactId>parent</artifactId>
+    <artifactId>androidtddworkshop-parent</artifactId>
     <version>${my.project.version}</version>
     <packaging>pom</packaging>
 
     <modules>
         <module>tdd-introduction</module>
         <module>empty-android-project</module>
+        <module>robolectric</module>
     </modules>
 
     <properties>
@@ -76,6 +77,7 @@
                         <sdk>
                             <platform>19</platform>
                         </sdk>
+                        <mergeManifests>true</mergeManifests>
                     </configuration>
                 </plugin>
             </plugins>

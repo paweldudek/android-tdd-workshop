@@ -6,7 +6,7 @@
 
     <parent>
         <groupId>pl.mobile-warsaw.androidtddworkshop</groupId>
-        <artifactId>parent</artifactId>
+        <artifactId>androidtddworkshop-parent</artifactId>
         <version>${my.project.version}</version>
     </parent>
 
@@ -26,5 +26,15 @@
             <artifactId>fest-assert</artifactId>
         </dependency>
     </dependencies>
+
+    <build>
+        <finalName>${project.artifactId}</finalName>
+        <plugins>
+            <plugin>
+                <groupId>com.jayway.maven.plugins.android.generation2</groupId>
+                <artifactId>android-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
 
 </project>

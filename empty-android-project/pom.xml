@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xmlns="http://maven.apache.org/POM/4.0.0"
-    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+         xmlns="http://maven.apache.org/POM/4.0.0"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
         <groupId>pl.mobile-warsaw.androidtddworkshop</groupId>
-        <artifactId>parent</artifactId>
+        <artifactId>androidtddworkshop-parent</artifactId>
         <version>${my.project.version}</version>
     </parent>
 
@@ -17,9 +17,10 @@
         <dependency>
             <groupId>com.google.android</groupId>
             <artifactId>android</artifactId>
+            <scope>provided</scope>
         </dependency>
     </dependencies>
-
+    
     <build>
         <finalName>${project.artifactId}</finalName>
         <plugins>
