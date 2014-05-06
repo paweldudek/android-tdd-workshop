@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="pl.mobilewarsaw.empty"
+    package="pl.mobilewarsaw.robolectric"
     android:versionCode="1"
     android:versionName="1.0.0-SNAPSHOT" >
 
@@ -12,13 +12,14 @@
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name">
-        <activity android:name="pl.mobilewarsaw.robolectric.EmptyActivity" >
+        <activity android:name=".MainActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".SecondActivity" />
     </application>
 
 </manifest>
