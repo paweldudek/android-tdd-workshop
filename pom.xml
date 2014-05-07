@@ -10,8 +10,8 @@
     <packaging>pom</packaging>
 
     <modules>
-        <module>tdd-introduction</module>
         <module>empty-android-project</module>
+        <module>adapter</module>
         <module>robolectric</module>
     </modules>
 
