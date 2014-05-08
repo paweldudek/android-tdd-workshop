@@ -5,4 +5,6 @@
     <string name="go_to_second">Go to Second Activity</string>
     <string name="show_toast">Show Toast</string>
     <string name="hello_second">Hello from Second Activity!</string>
+    <string name="location">Current location</string>
+    <string name="share_location_btn">Send location via SMS</string>
 </resources>

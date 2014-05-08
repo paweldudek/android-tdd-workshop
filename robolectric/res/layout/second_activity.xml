@@ -11,4 +11,24 @@
         android:layout_height="wrap_content"
         android:text="@string/hello_second"
         android:textSize="24sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/location"
+        android:textSize="24sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/location_text"
+        android:textSize="24sp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/send_sms_with_location"
+        android:text="@string/share_location_btn"
+        android:visibility="gone"/>
+
 </LinearLayout>
