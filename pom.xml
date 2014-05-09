@@ -13,6 +13,7 @@
         <module>empty-android-project</module>
         <module>adapter</module>
         <module>robolectric</module>
+	<module>katas</module>
     </modules>
 
     <properties>
